@@ -3,29 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
-
-    <fragment
-        android:id="@+id/nav_home"
-        android:name="bimo.syahputro.chromeincowner.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
-
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="bimo.syahputro.chromeincowner.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="bimo.syahputro.chromeincowner.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+    app:startDestination="@+id/nav_dashboard">
 
     <fragment
         android:id="@+id/nav_dashboard"
         android:name="bimo.syahputro.chromeincowner.ui.dashboard.DashboardFragment"
-        android:label="Dashboard"
+        android:label="@string/menu_dashboard"
         tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/nav_omsetharian"
+        android:name="bimo.syahputro.chromeincowner.ui.omsetharian.OmsetHarianFragment"
+        android:label="@string/menu_omset_per_hari"
+        tools:layout="@layout/fragment_omset_harian" />
+
+    <fragment
+        android:id="@+id/nav_omsetkeseluruhan"
+        android:name="bimo.syahputro.chromeincowner.ui.omsetkeseluruhan.OmsetKeseluruhanFragment"
+        android:label="@string/menu_akumulasi_omset"
+        tools:layout="@layout/fragment_omset_keseluruhan" />
+
+    <fragment
+        android:id="@+id/nav_transaksiharian"
+        android:name="bimo.syahputro.chromeincowner.ui.transaksiharian.TransaksiHarianFragment"
+        android:label="@string/menu_transaksi_per_hari"
+        tools:layout="@layout/fragment_transaksi_harian" />
 </navigation>

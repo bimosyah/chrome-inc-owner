@@ -1,9 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.dashboard.DashboardFragment">
 
+    <GridLayout
+        android:id="@+id/gl_menu"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:columnOrderPreserved="false"
+        android:padding="14dp"
+        android:rowCount="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_person">
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp"
+            android:backgroundTint="@color/dashboard_transaksi">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="21"
+                    android:textSize="45dp" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Transaksi"
+                    android:textSize="19dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp"
+            android:backgroundTint="@color/dashboard_selesai">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="21"
+                    android:textSize="45dp" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Transaksi Selesai"
+                    android:textSize="19dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp"
+            android:backgroundTint="@color/dashboard_dikerjakan">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="21"
+                    android:textSize="45dp" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Transaksi Dikerjakan"
+                    android:textSize="19dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp"
+            android:backgroundTint="@color/dashboard_menunggu">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="21"
+                    android:textSize="45dp" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Transaksi Menunggu"
+                    android:textSize="19dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
 </FrameLayout>
