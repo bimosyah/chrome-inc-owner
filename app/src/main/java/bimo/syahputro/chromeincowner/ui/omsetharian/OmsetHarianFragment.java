@@ -104,7 +104,6 @@ public class OmsetHarianFragment extends Fragment {
         cartesian.legend().padding(0d, 0d, 10d, 0d);
 
         anyChartView.setChart(cartesian);
-
     }
 
     private void init() {
