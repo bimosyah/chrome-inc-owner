@@ -28,4 +28,10 @@
         android:name="bimo.syahputro.chromeincowner.ui.transaksiharian.TransaksiHarianFragment"
         android:label="@string/menu_transaksi_per_hari"
         tools:layout="@layout/fragment_transaksi_harian" />
+
+    <fragment
+        android:id="@+id/nav_message"
+        android:name="bimo.syahputro.chromeincowner.ui.message.MessageFragment"
+        android:label="@string/menu_message"
+        tools:layout="@layout/fragment_message" />
 </navigation>
