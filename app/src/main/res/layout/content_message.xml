@@ -8,5 +8,5 @@
         android:id="@+id/rv_message"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_message"/>
+        tools:listitem="@layout/item_message_left"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

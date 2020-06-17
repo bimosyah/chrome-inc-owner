@@ -12,6 +12,11 @@ public class Message {
     @SerializedName("timestamp")
     private String timestamp;
 
+    public Message(String sender, String message) {
+        this.sender = sender;
+        this.message = message;
+    }
+
     public String getId() {
         return id;
     }

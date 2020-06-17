@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel;
 import bimo.syahputro.chromeincowner.network.ApiClient;
 import bimo.syahputro.chromeincowner.network.ApiService;
 import bimo.syahputro.chromeincowner.network.responses.MessageResponse;
+import bimo.syahputro.chromeincowner.network.responses.MessageSentResponse;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -14,10 +15,9 @@ import retrofit2.Response;
 public class MessageViewModel extends ViewModel {
 
     private MutableLiveData<MessageResponse> liveData;
-    private ApiService apiService;
+    private ApiService apiService = ApiClient.getClient().create(ApiService.class);;
 
     private void loadData() {
-        apiService = ApiClient.getClient().create(ApiService.class);
         apiService.loadMessage().enqueue(new Callback<MessageResponse>() {
             @Override
             public void onResponse(Call<MessageResponse> call, Response<MessageResponse> response) {
@@ -30,6 +30,20 @@ public class MessageViewModel extends ViewModel {
 
             @Override
             public void onFailure(Call<MessageResponse> call, Throwable t) {
+
+            }
+        });
+    }
+
+    public void sentMessage(String message){
+        apiService.sentMessage(message).enqueue(new Callback<MessageSentResponse>() {
+            @Override
+            public void onResponse(Call<MessageSentResponse> call, Response<MessageSentResponse> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<MessageSentResponse> call, Throwable t) {
 
             }
         });

@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -28,6 +30,8 @@ public class MessageFragment extends Fragment {
     List<Message> messageList;
     RecyclerView rvMessage;
     MessageAdapter adapter;
+    ImageView ivSent;
+    EditText etMessage;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,6 +52,20 @@ public class MessageFragment extends Fragment {
                 setupRecyclerView();
             }
         });
+
+        ivSent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String message = etMessage.getText().toString();
+                if (!message.equals("")){
+                    messageList.add(new Message("1", message));
+                    adapter.notifyDataSetChanged();
+                    viewModel.sentMessage(message);
+                    etMessage.setText("");
+                    rvMessage.scrollToPosition(messageList.size() - 1);
+                }
+            }
+        });
     }
 
     private void setupRecyclerView() {
@@ -64,6 +82,8 @@ public class MessageFragment extends Fragment {
 
 
     private void init() {
+        etMessage = view.findViewById(R.id.et_message);
+        ivSent = view.findViewById(R.id.iv_sent);
         viewModel = ViewModelProviders.of(this).get(MessageViewModel.class);
         rvMessage = view.findViewById(R.id.rv_message);
     }
