@@ -2,6 +2,7 @@ package bimo.syahputro.chromeincowner.network;
 
 
 import bimo.syahputro.chromeincowner.network.responses.DashboardResponse;
+import bimo.syahputro.chromeincowner.network.responses.LoginResponse;
 import bimo.syahputro.chromeincowner.network.responses.MessageResponse;
 import bimo.syahputro.chromeincowner.network.responses.MessageSentResponse;
 import bimo.syahputro.chromeincowner.network.responses.OmsetHarianResponse;
@@ -29,4 +30,11 @@ public interface ApiService {
     @FormUrlEncoded
     @POST("message/sentMessage")
     Call<MessageSentResponse> sentMessage(@Field("message") String message);
+
+    @FormUrlEncoded
+    @POST("login/dologin")
+    Call<LoginResponse> login(
+            @Field("username") String username,
+            @Field("password") String password
+    );
 }

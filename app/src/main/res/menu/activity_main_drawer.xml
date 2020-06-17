@@ -15,11 +15,6 @@
             android:title="@string/menu_omset_per_hari" />
 
         <item
-            android:id="@+id/nav_omsetkeseluruhan"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_akumulasi_omset" />
-
-        <item
             android:id="@+id/nav_transaksiharian"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_transaksi_per_hari" />

@@ -1,9 +1,11 @@
 package bimo.syahputro.chromeincowner;
 
 import android.app.Notification;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -24,6 +26,9 @@ import com.pusher.client.channel.SubscriptionEventListener;
 import com.pusher.client.connection.ConnectionEventListener;
 import com.pusher.client.connection.ConnectionState;
 import com.pusher.client.connection.ConnectionStateChange;
+
+import bimo.syahputro.chromeincowner.ui.login.LoginActivity;
+import bimo.syahputro.chromeincowner.utils.Preference;
 
 import static bimo.syahputro.chromeincowner.utils.Notification.CHANNEL_1_ID;
 
@@ -58,6 +63,17 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_logout) {
+            Preference.clearLoggedInUser(getApplicationContext());
+            finish();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -109,5 +125,15 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         notificationManagerCompat.notify(1, notification);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("EXIT", true);
+        startActivity(intent);
+    }
+
 
 }
