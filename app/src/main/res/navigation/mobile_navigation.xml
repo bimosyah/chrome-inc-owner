@@ -7,31 +7,31 @@
 
     <fragment
         android:id="@+id/nav_dashboard"
-        android:name="bimo.syahputro.chromeincowner.ui.dashboard.DashboardFragment"
+        android:name="ninda.sabilla.chromeincowner.ui.dashboard.DashboardFragment"
         android:label="@string/menu_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/nav_omsetharian"
-        android:name="bimo.syahputro.chromeincowner.ui.omsetharian.OmsetHarianFragment"
+        android:name="ninda.sabilla.chromeincowner.ui.omsetharian.OmsetHarianFragment"
         android:label="@string/menu_omset_per_hari"
         tools:layout="@layout/fragment_omset_harian" />
 
     <fragment
         android:id="@+id/nav_omsetkeseluruhan"
-        android:name="bimo.syahputro.chromeincowner.ui.omsetkeseluruhan.OmsetKeseluruhanFragment"
+        android:name="ninda.sabilla.chromeincowner.ui.omsetkeseluruhan.OmsetKeseluruhanFragment"
         android:label="@string/menu_akumulasi_omset"
         tools:layout="@layout/fragment_omset_keseluruhan" />
 
     <fragment
         android:id="@+id/nav_transaksiharian"
-        android:name="bimo.syahputro.chromeincowner.ui.transaksiharian.TransaksiHarianFragment"
+        android:name="ninda.sabilla.chromeincowner.ui.transaksiharian.TransaksiHarianFragment"
         android:label="@string/menu_transaksi_per_hari"
         tools:layout="@layout/fragment_transaksi_harian" />
 
     <fragment
         android:id="@+id/nav_message"
-        android:name="bimo.syahputro.chromeincowner.ui.message.MessageFragment"
+        android:name="ninda.sabilla.chromeincowner.ui.message.MessageFragment"
         android:label="@string/menu_message"
         tools:layout="@layout/fragment_message" />
 </navigation>
